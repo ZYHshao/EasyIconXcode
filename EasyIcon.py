@@ -11,10 +11,11 @@ def startWork(filePath,dirPaht):
         oriIm.close()
         outdata = open(outfile + str(size[0])+".png", "w")
         outdata.write(indata)
+        outdata.close()
         newImage = Image.open(outfile + str(size[0])+".png")
         out = newImage.resize(size, Image.ANTIALIAS)
         out.save(outfile + str(size[0])+".png")
-        outdata.close()
+        
         newImage.close()
 
 
